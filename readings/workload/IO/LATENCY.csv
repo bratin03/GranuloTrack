@@ -1,0 +1,5 @@
+File Size (MB),Read Maximum Latency (ns),Read Mean Latency (ns),Read Median Latency (ns),Write Maximum Latency (ns),Write Mean Latency (ns),Write Median Latency (ns),Read 25th Percentile Latency (ns),Read 75th Percentile Latency (ns),Write 25th Percentile Latency (ns),Write 75th Percentile Latency (ns)
+1,461793.4,37887.530,12779.9,212360.4,16989.652,15709.0,11304.75,34040.95,14190.9,18160.55
+10,946184.2,16460.774,11019.3,3145851,13123.306,14334.2,10720.1,11490.65,12221.55,19347.4
+100,2502720,12092.348,10890.5,9262983,15100.232,12717.6,10634.6,11169.8,12319.35,14554.15
+1000,7512607.2,11634.784,10894.8,297988513.8,21644.370,12765.0,10629,11185.8,12341.2,13863
