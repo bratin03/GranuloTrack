@@ -77,4 +77,6 @@ Each line in the log files is a JSON object with the following fields:
 
 * **Attack Traffic**:
 
-  * Logs were generated and sent over **UDP** from a remote client connected via a **100 Gbps Ethernet link**, simulating a high-throughput Syslog flood scenario
+  * Logs were generated and sent over **UDP** from a remote client connected via a **100 Gbps Ethernet link**, simulating a high-throughput Syslog flood scenario.
+  * The attack involved **100 clients**, each sending **100 log messages per second**.
+  * Each log message was **1024 bytes** in size.
