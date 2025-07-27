@@ -58,6 +58,11 @@
 │   │   ├── ATTACK.log
 │   │   ├── NORMAL.log
 │   │   └── README.md
+│   ├── load_balancer
+│   │   ├── GranuloTrack.csv
+│   │   ├── Htop.csv
+│   │   ├── Nginx.csv
+│   │   └── README.md
 │   └── workload
 │       ├── CPU
 │       │   ├── README.md
@@ -82,5 +87,10 @@
 
 ## Description
 - The `benchmark` directory contains source code for workload benchmarks in CPU, IO, and MEMORY categories.
-- The `readings` directory contains logs and datasets from various experiments, including Chrome memory usage, CVE attacks, DeathStarBench workloads, and more.
+- The `readings` directory contains logs and datasets from various experiments, including Chrome memory usage, CVE attacks, DeathStarBench workloads, load balancing strategies comparison, and more.
 - The `src` directory contains the source code for GranuloTrack, including usage instructions and tracking functionalities for CPU, IO, and memory.
+
+## Key Experiments
+- **Load Balancing Comparison**: Three strategies (Nginx, GranuloTrack, Htop) under stress with 4 Apache servers
+- **Performance Monitoring**: Real-time CPU burst detection for improved load distribution
+- **Stress Testing**: Sequential CPU stress injection to evaluate adaptive capabilities
