@@ -37,6 +37,11 @@ This directory contains the readings of the experiments conducted for the benchm
 │   ├── ATTACK.log
 │   ├── NORMAL.log
 │   └── README.md
+├── load_balancer
+│   ├── GranuloTrack.csv
+│   ├── Htop.csv
+│   ├── Nginx.csv
+│   └── README.md
 └── workload
     ├── CPU
     │   ├── README.md
@@ -53,4 +58,12 @@ This directory contains the readings of the experiments conducted for the benchm
 ```
 
 ## Description
-This directory contains the readings of various experiments conducted to evaluate the performance and overhead of GranuloTrack. Each subdirectory contains logs or datasets related to specific experiments, such as Chrome memory usage, CVE attacks, DeathStarBench workloads, and more.
+This directory contains the readings of various experiments conducted to evaluate the performance and overhead of GranuloTrack. Each subdirectory contains logs or datasets related to specific experiments, such as Chrome memory usage, CVE attacks, DeathStarBench workloads, load balancing strategies comparison, and more.
+
+### Key Experiments
+- **Load Balancing Comparison**: Three strategies (Nginx, GranuloTrack, Htop) under stress conditions
+- **Chrome Memory Analysis**: Memory usage patterns in Chrome browser versions
+- **CVE Attack Detection**: Performance monitoring during security attacks
+- **DeathStarBench Workloads**: Database and web service performance evaluation
+- **Network Attack Detection**: TCP SYN flood and syslog attack monitoring
+- **Performance Overhead**: GranuloTrack's impact on system performance

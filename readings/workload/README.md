@@ -28,11 +28,11 @@ For further details on each dataset, refer to the respective `README.md` files i
 
 * **Host System Specifications**:
 
-  * **Processor**: 11th Gen Intel i5-1135G7 (8-core, 2.40 GHz, turbo enabled)
+  * **Processor**: Intel Xeon Gold 6336Y (16-core, 2.40 GHz)
   * **RAM**: 8 GB
-  * **Storage**: 185 GB
-  * **Operating System**: Ubuntu 20.04
-  * **Kernel**: 5.15.0-122-generic
+  * **Storage**: 50 GB
+  * **Operating System**: Ubuntu 20.04.6 LTS
+  * **Kernel**: 5.15.0-139-generic
   * **Architecture**: x86\_64
 
 * **Docker Configuration**:

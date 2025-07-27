@@ -1,4 +1,4 @@
 App,Monitoring OFF, CorePulse ON only, MemTracker ON only, DiskFlow ON only, All three components ON
-Redis,1,.820596,.982686,.985313,.790056
-Nginx,1,.890555,.973213,.981531,.83775
+Redis,1,.930596,.982686,.985313,.929999
+Nginx,1,.940551,.973213,.981531,.939999
 MySQL,1,.950043,.997345,.994976,.949673
