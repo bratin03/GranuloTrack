@@ -1,56 +1,49 @@
-# Readings of Experiments
-This directory contains the readings of the experiments conducted for the benchmarking and evaluation of GranuloTrack.
+# Readings
+
+Experimental results and performance logs from GranuloTrack evaluation.
 
 ## Directory Structure
 
-```txt
+```
 .
-├── chrome
-│   ├── MEM_Chrome_102.log
-│   ├── MEM_Chrome_133.log
-│   └── README.md
-├── cve_attack
-│   ├── CPU.log
-│   ├── MEM.log
-│   └── README.md
-├── deathstarbench
-│   ├── Normal_Cpu.log
-│   ├── Normal_Mem.log
-│   ├── README.md
-│   ├── Stress_Cpu.log
-│   └── Stress_Mem.log
-├── overhead
-│   ├── APP.csv
-│   ├── CPU.csv
-│   ├── MEM.csv
-│   └── README.md
-├── README.md
-├── rocksdb
-│   ├── MEM_Rocksdb_5.log
-│   ├── MEM_Rocksdb_6.log
-│   └── README.md
-├── syslog
-│   ├── ATTACK.log
-│   ├── NORMAL.log
-│   └── README.md
-├── tcp_syn_flood
-│   ├── ATTACK.log
-│   ├── NORMAL.log
-│   └── README.md
-└── workload
-    ├── CPU
-    │   ├── README.md
-    │   ├── W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv
-    │   ├── W2_GT_PERF_INST.csv
-    │   └── W2_GT_PERF_TIME_TIME.csv
-    ├── IO
-    │   ├── LATENCY.csv
-    │   └── README.md
-    ├── MEMORY
-    │   ├── DATA.csv
-    │   └── README.md
-    └── README.md
+├── chrome/                    # Chrome memory usage logs
+├── cve_attack/               # CVE attack performance logs
+├── deathstarbench/           # DeathStarBench workload logs
+├── load_balancer/            # Load balancing comparison data
+├── overhead/                 # Performance overhead measurements
+├── rocksdb/                  # RocksDB memory allocation logs
+├── syslog/                   # System log analysis
+├── tcp_syn_flood/            # TCP SYN flood attack logs
+└── workload/                 # CPU, IO, and memory workload data
 ```
 
-## Description
-This directory contains the readings of various experiments conducted to evaluate the performance and overhead of GranuloTrack. Each subdirectory contains logs or datasets related to specific experiments, such as Chrome memory usage, CVE attacks, DeathStarBench workloads, and more.
+## How to Run
+
+```bash
+# View Chrome memory logs
+ls chrome/*.log
+
+# View CVE attack logs
+ls cve_attack/*.log
+
+# View DeathStarBench logs
+ls deathstarbench/*.log
+
+# View load balancing data
+ls load_balancer/*.csv
+
+# View overhead measurements
+ls overhead/*.csv
+
+# View RocksDB memory logs
+ls rocksdb/*.log
+
+# View syslog attack data
+ls syslog/*.log
+
+# View TCP SYN flood data
+ls tcp_syn_flood/*.log
+
+# View workload datasets
+ls workload/*/
+```

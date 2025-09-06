@@ -1,58 +1,44 @@
 # Workload Datasets
 
-This directory contains various [workload](../../benchmark/) datasets captured.
+Workload datasets captured from benchmark experiments.
 
 ## Directory Structure
 
-```txt
+```
 .
-├── CPU
-│   ├── README.md
-│   ├── W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv
-│   ├── W2_GT_PERF_INST.csv
-│   └── W2_GT_PERF_TIME_TIME.csv
-├── IO
-│   ├── LATENCY.csv
-│   └── README.md
-├── MEMORY
-│   ├── DATA.csv
-│   └── README.md
+├── CPU/                        # CPU workload performance data
+├── IO/                         # I/O latency measurements
+├── MEMORY/                     # Memory allocation data
 └── README.md
 ```
 
-For further details on each dataset, refer to the respective `README.md` files in each subdirectory.
+## How to Run
 
-## Environment
-* **Containerized Setup**:
-  All experiments were conducted inside a Docker container running **Ubuntu 20.04** to ensure a consistent and isolated environment for BPF tracing.
+```bash
+# Navigate to setup directory
+cd ../../setup/
 
-* **Host System Specifications**:
+# Run CPU benchmarks
+cd CPU/
+make
+./WorkLoad_1 [iterations]
+./WorkLoad_2 [iterations]
 
-  * **Processor**: 11th Gen Intel i5-1135G7 (8-core, 2.40 GHz, turbo enabled)
-  * **RAM**: 8 GB
-  * **Storage**: 185 GB
-  * **Operating System**: Ubuntu 20.04
-  * **Kernel**: 5.15.0-122-generic
-  * **Architecture**: x86\_64
+# Run IO benchmarks
+cd ../IO/
+make
+./Read [size_in_mb]
+./Write [size_in_mb]
 
-* **Docker Configuration**:
+# Run Memory benchmarks
+cd ../MEMORY/
+make
+./Malloc [size_in_bytes]
+python3 ByteArray.py [size_in_bytes]
+```
 
-  * Launched with `--privileged` mode
-  * Capabilities enabled:
-
-    * `SYS_ADMIN`
-    * `SYS_RESOURCE`
-    * `SYS_PTRACE`
-  * Host directories mounted for kernel access:
-
-    * `/sys/kernel/debug`
-    * `/sys/kernel/tracing` (for BPF and tracepoints)
-    * `/proc` (for process/kernel statistics)
-    * `/lib/modules/$(uname -r)` (for kernel modules)
-  * Used `--pid=host` to share the host PID namespace, enabling full process tracing
-
-* **Repetition & Statistical Reporting**:
-
-  * Each experiment was repeated **at least 20 times**
-  * The dataset provided here only containes the **average** of the collected data
+## Description
+- **CPU/**: Instruction count and performance timing data
+- **IO/**: I/O latency measurements for various data sizes
+- **MEMORY/**: Memory allocation patterns and timing data
 

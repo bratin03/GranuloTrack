@@ -1,13 +1,37 @@
 # Memory Workload Dataset
-This dataset contains CPU workload data collected for [benchmarks](../../../benchmark/MEMORY/)
+
+Memory workload data collected from memory benchmarks.
 
 ## Directory Structure
-```txt
+
+```
 .
-├── DATA.csv
+├── DATA.csv                   # Memory allocation data for various sizes
 └── README.md
 ```
 
+## How to Run
+
+```bash
+# Navigate to setup directory
+cd ../../../setup/MEMORY/
+
+# Compile and run workloads
+make
+./Malloc [size_in_bytes]
+python3 ByteArray.py [size_in_bytes]
+
+# Run kernel memory workload
+cd kmalloc/
+make
+sudo insmod kmalloc_lkm.ko
+./Test [size_in_bytes]
+sudo rmmod kmalloc_lkm
+```
+
 ## Description
-- `DATA.csv`: Contains the memory workload data for various sizes of memory allocations made through [`malloc`](../../../benchmark/MEMORY/Malloc.c), [`bytearray`](../../../benchmark/MEMORY/ByteArray.py), and [`kmalloc`](../../../benchmark/MEMORY/kmalloc/). The data includes the requested allocation size and the total memory allocation captured by GranuloTrack for the respective processes. For `kmalloc`, allocation sizes range from 2<sup>5</sup> (32 bytes) to 2<sup>22</sup> (4,194,304 bytes). For `malloc` and `bytearray`, allocation sizes range from 2<sup>0</sup> (1 byte) to 2<sup>30</sup> (1,073,741,824 bytes), increasing in powers of 2.
+- **DATA.csv**: Memory allocation data for various allocation sizes
+- **kmalloc**: Sizes from 2^5 (32 bytes) to 2^22 (4,194,304 bytes)
+- **malloc/bytearray**: Sizes from 2^0 (1 byte) to 2^30 (1,073,741,824 bytes)
+- Data collected using GranuloTrack's MemTracker tracers
 

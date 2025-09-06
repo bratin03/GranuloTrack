@@ -1,16 +1,30 @@
 # CPU Workload Dataset
-This dataset contains CPU workload data collected for [benchmarks](../../../benchmark/CPU/)
+
+CPU workload data collected from CPU benchmarks.
 
 ## Directory Structure
-```txt
+
+```
 .
-├── README.md
-├── W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv
-├── W2_GT_PERF_INST.csv
-└── W2_GT_PERF_TIME_TIME.csv
+├── W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv    # Instruction count comparison for WorkLoad_1
+├── W2_GT_PERF_INST.csv                     # Instruction count comparison for WorkLoad_2
+├── W2_GT_PERF_TIME_TIME.csv                # Execution time comparison for WorkLoad_2
+└── README.md
+```
+
+## How to Run
+
+```bash
+# Navigate to setup directory
+cd ../../../setup/CPU/
+
+# Compile and run workloads
+make
+./WorkLoad_1 [iterations]
+./WorkLoad_2 [iterations]
 ```
 
 ## Description
-- `W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv`: Contains the instruction count for the [first workload](../../../benchmark/CPU/WorkLoad_1.c) for various number of iterations captured GranuloTrack, GDB, and Perf.
-- `W2_GT_PERF_INST.csv`: Contains the instruction count for the [second workload](../../../benchmark/CPU/WorkLoad_2.c) for various number of iterations captured GranuloTrack and Perf.
-- `W2_GT_PERF_TIME_TIME.csv`: Contains the execution time for the [second workload](../../../benchmark/CPU/WorkLoad_2.c) for various number of iterations captured GranuloTrack, Perf and Time Command.
+- **W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv**: Instruction count comparison between GranuloTrack, GDB, and Perf for WorkLoad_1
+- **W2_GT_PERF_INST.csv**: Instruction count comparison between GranuloTrack and Perf for WorkLoad_2
+- **W2_GT_PERF_TIME_TIME.csv**: Execution time comparison between GranuloTrack, Perf, and Time command for WorkLoad_2

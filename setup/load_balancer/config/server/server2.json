@@ -1,0 +1,16 @@
+{
+  "server_id": "server2",
+  "source": "htop",
+  "load_balancer": {
+    "host": "127.0.0.1",
+    "port": 10010
+  },
+  "monitoring": {
+    "description": "Server 2 monitoring configuration",
+    "update_interval_ms": 500,
+    "send_interval_ms": 2000,
+    "max_samples": 20,
+    "process_names": ["apache2", "httpd"],
+    "process_patterns": ["apache2", "httpd"]
+  }
+}

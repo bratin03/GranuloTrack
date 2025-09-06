@@ -1,0 +1,53 @@
+{
+    "client_ip": "127.0.0.1",
+    "client_port": 10000,
+    "update_ip": "127.0.0.1",
+    "update_port": 10010,
+    "protocol": {
+        "client_requests": "tcp",
+        "server_updates": "udp"
+    },
+    "use_case": "htop",
+    "initial_min_threshold": 25.0,
+    "initial_max_threshold": 75.0,
+    "weight_factor": 0.6,
+    "update_threshold": 5.0,
+    "min_factor": 0.5,
+    "max_factor": 2.0,
+    "max_connections": 10000,
+    "buffer_size": 8192,
+    "timeout_seconds": 30,
+    "connection_pool_size": 16,
+    "connection_wait_timeout": 5,
+    "socket_timeout": 5,
+    "connection_timeout": 300,
+    "health_check_interval": 30,
+    "server_health_timeout": 60,
+    "server_health_threshold": 30,
+    "servers": [
+        {
+            "id": "server1",
+            "ip": "127.0.0.1",
+            "port": 10021,
+            "initial_utilization": 50.0
+        },
+        {
+            "id": "server2",
+            "ip": "127.0.0.1",
+            "port": 10022,
+            "initial_utilization": 45.0
+        },
+        {
+            "id": "server3",
+            "ip": "127.0.0.1",
+            "port": 10023,
+            "initial_utilization": 55.0
+        },
+        {
+            "id": "server4",
+            "ip": "127.0.0.1",
+            "port": 10024,
+            "initial_utilization": 60.0
+        }
+    ]
+}

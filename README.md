@@ -1,83 +1,35 @@
 # GranuloTrack
 
+System monitoring framework for real-time performance tracking.
+
 ## Directory Structure
 
-```txt
-.
-├── benchmark
-│   ├── CPU
-│   │   ├── README.md
-│   │   ├── WorkLoad_1.c
-│   │   └── WorkLoad_2.c
-│   ├── IO
-│   │   ├── Read.c
-│   │   ├── README.md
-│   │   └── Write.c
-│   ├── MEMORY
-│   │   ├── ByteArray.py
-│   │   ├── kmalloc
-│   │   │   ├── kmalloc_lkm.c
-│   │   │   ├── Makefile
-│   │   │   └── Test.c
-│   │   ├── Malloc.c
-│   │   └── README.md
-│   └── README.md
-├── readings
-│   ├── chrome
-│   │   ├── MEM_Chrome_102.log
-│   │   ├── MEM_Chrome_133.log
-│   │   └── README.md
-│   ├── cve_attack
-│   │   ├── CPU.log
-│   │   ├── MEM.log
-│   │   └── README.md
-│   ├── deathstarbench
-│   │   ├── Normal_Cpu.log
-│   │   ├── Normal_Mem.log
-│   │   ├── README.md
-│   │   ├── Stress_Cpu.log
-│   │   └── Stress_Mem.log
-│   ├── overhead
-│   │   ├── APP.csv
-│   │   ├── CPU.csv
-│   │   ├── MEM.csv
-│   │   └── README.md
-│   ├── README.md
-│   ├── rocksdb
-│   │   ├── MEM_Rocksdb_5.log
-│   │   ├── MEM_Rocksdb_6.log
-│   │   └── README.md
-│   ├── syslog
-│   │   ├── ATTACK.log
-│   │   ├── NORMAL.log
-│   │   └── README.md
-│   ├── tcp_syn_flood
-│   │   ├── ATTACK.log
-│   │   ├── NORMAL.log
-│   │   └── README.md
-│   └── workload
-│       ├── CPU
-│       │   ├── README.md
-│       │   ├── W1_GT_GDB_PERF_INSTRUCTION_COUNT.csv
-│       │   ├── W2_GT_PERF_INST.csv
-│       │   └── W2_GT_PERF_TIME_TIME.csv
-│       ├── IO
-│       │   ├── LATENCY.csv
-│       │   └── README.md
-│       ├── MEMORY
-│       │   ├── DATA.csv
-│       │   └── README.md
-│       └── README.md
-├── README.md
-└── src
-    ├── CorePulse.py
-    ├── DiskFlow.py
-    ├── MemTracker_Kernel.py
-    ├── MemTracker_User.py
-    └── README.md
+```
+GranuloTrack/
+├── setup/                      # Performance benchmarks and workload generators
+│   ├── CPU/                    # CPU workload generators and stress tests
+│   ├── IO/                     # Disk I/O performance benchmarks
+│   ├── MEMORY/                 # Memory allocation and rate generators
+│   ├── chrome/                 # Chrome browser memory analysis tools
+│   ├── rocksdb/                # RocksDB database performance tests
+│   ├── deathstarbench/         # Microservice workload testing suite
+│   ├── CVE/                    # Security vulnerability testing tools
+│   └── real_world_apps/        # MySQL, Redis, Nginx application testing
+├── readings/                   # Experimental results and performance logs
+│   ├── workload/               # CPU, IO, and memory workload data
+│   ├── load_balancer/          # Load balancing strategy comparisons
+│   ├── overhead/               # Performance overhead measurements
+│   ├── chrome/                 # Chrome memory usage logs
+│   ├── rocksdb/                # RocksDB memory allocation logs
+│   ├── deathstarbench/         # Microservice performance logs
+│   ├── cve_attack/             # Security attack performance logs
+│   ├── syslog/                 # System log analysis data
+│   └── tcp_syn_flood/          # Network attack simulation logs
+└── src/                        # Core monitoring components for CPU, memory, and I/O tracking
+    ├── CorePulse.py            # CPU performance tracer with hardware counters
+    ├── DiskFlow.py             # Disk I/O monitoring with filtering
+    ├── MemTracker_Kernel.py    # Kernel-space memory allocation tracer
+    └── MemTracker_User.py      # User-space memory allocation tracer
 ```
 
-## Description
-- The `benchmark` directory contains source code for workload benchmarks in CPU, IO, and MEMORY categories.
-- The `readings` directory contains logs and datasets from various experiments, including Chrome memory usage, CVE attacks, DeathStarBench workloads, and more.
-- The `src` directory contains the source code for GranuloTrack, including usage instructions and tracking functionalities for CPU, IO, and memory.
+For usage instructions, see README files in each subdirectory.

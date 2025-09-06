@@ -1,0 +1,187 @@
+# Build artifacts and executables
+*.o
+*.ko
+*.obj
+*.elf
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.la
+*.lo
+
+# Compiled C/C++ programs
+WorkLoad_1
+WorkLoad_2
+CPU_Load_Generator
+Read
+Write
+Malloc
+Memory_Rate_Generator
+Test
+kmalloc_lkm.ko
+mysql_client
+nginx_client
+redis_client
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+debug_*.log
+corepulse_*.log
+diskflow_*.log
+memtracker_*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+
+# System files
+/proc/
+/sys/
+/dev/
+/run/
+/tmp/
+/var/tmp/
+
+# Real-world applications testing environment
+/tmp/mysql-server/
+/tmp/redis-server/
+/tmp/nginx-server/
+
+# Kernel module build artifacts
+*.mod.c
+*.mod.o
+*.order
+*.symvers
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+
+# BPF and eBPF artifacts
+*.bpf.o
+*.bpf.c
+*.skel.h
+
+# Experimental results
+experimental_results/
+results/
+output/
+data/
+benchmark_results/
+performance_logs/
+overhead_measurements/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files with sensitive data
+.env
+
+# Backup files
+*.tar.gz
+*.zip
+*.rar
+
+# Documentation build
+docs/_build/
+docs/build/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# GranuloTrack specific
+*.csv
+*.log
+*.dat
+performance_data/
+granulotrack_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
